@@ -1,0 +1,115 @@
+.navbar-static-top {
+  margin-bottom:20px;
+}
+
+i {
+  font-size:16px;
+}
+
+.nav > li > a {
+  color:#787878;
+}
+  .label,.glyphicon { margin-right:5px; }
+footer {
+  margin-top:20px;
+  padding-top:20px;
+  padding-bottom:20px;
+  background-color:blue;
+}
+/*header*/
+header .header-topbar {
+    background-color: #195690;
+    width: 100%;
+    color: #fff;
+    line-height: 50px
+}
+
+header .header-topbar .container {
+    background: #195690;
+    width: 100%;
+}
+
+header .header-topbar a, header .header-topbar span, header .header-topbar p {
+    color: white;
+    font-size: 12px;
+    transition: all 0.2s ease
+}
+
+header .header-topbar a:hover, header .header-topbar span:hover, header .header-topbar p:hover {
+    color: #2aacff
+}
+
+header .header-topbar .email, header .header-topbar .hotline {
+    display: inline-block
+}
+
+header .header-topbar .email .topbar-icon, header .header-topbar .hotline .topbar-icon {
+    color: #2aacff;
+    margin-right: 10px;
+    font-size: 16px
+}
+
+header .header-topbar .email {
+    margin-right: 20px
+}
+
+header .header-topbar .socials, header .header-topbar .group-sign-in {
+    display: inline-block;
+    padding-top: 0
+}
+
+header .header-topbar .socials a {
+    color: #a7abb3;
+    padding: 0px 10px;
+    width: auto;
+    height: auto;
+    background-color: transparent
+}
+
+header .header-topbar .socials a i {
+    transition: all 0.3s ease
+}
+
+header .header-topbar .socials a:hover i {
+    color: #2aacff
+}
+
+header .header-topbar .socials a:last-child {
+    margin-right: 0
+}
+
+header .header-topbar .group-sign-in {
+    margin-left: 70px;
+    text-transform: capitalize
+}
+
+header .header-topbar .group-sign-in .login:after {
+    content: '|';
+    margin-right: 10px;
+    padding-left: 10px;
+    color: #fff !important
+}
+
+/* count indicator near icons */
+.nav>li .count {
+  position: absolute;
+  bottom: 12px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: normal;
+  background: rgba(51,200,51,0.55);
+  color: #ffffff;
+  line-height: 1em;
+  padding: 2px 4px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* indent 2nd level */
+.list-unstyled li > ul > li {
+   margin-left:10px;
+   padding:8px;
+}
