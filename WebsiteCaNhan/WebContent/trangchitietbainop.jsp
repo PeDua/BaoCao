@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 
@@ -13,12 +12,7 @@
     <link rel="shortcut icon" href="img/icon.ico" />
     <!--  Responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Dong Ho -->
-    <link href="css/datepicker.css" rel="stylesheet">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/datepicker.en.js"></script>
-    <!-- End DongHo -->
+  
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
     <script src="jquery/jquery-3.1.0.js"></script>
@@ -113,18 +107,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-     <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>Home</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-list-alt fa-fw"></i>Widgets</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-table fa-fw"></i>Table</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-calendar fa-fw"></i>Calender</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-book fa-fw"></i>Library</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-pencil fa-fw"></i>Applications</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
-            </ul>
+                         <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="trangchuGV.html"><i class="fa fa-home fa-fw"></i>Trang chủ</a></li>
+                <li><a href="trangkhoahocGV.html"><i class="fa fa-list-alt fa-fw"></i>Khóa học</a></li>
+                <li><a href="trangkhoahocGV.html"><i class="fa fa-file-o fa-fw"></i>Tài liệu</a></li>          
+                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-book fa-fw"></i>Bài tập</a></li>
+                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-tasks fa-fw"></i>Bài tập trắc nghiệm</a></li>    
+                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-cogs fa-fw"></i>Cài đặt</a></li>
+      </ul>
    
     </div>
                         <div class="col-md-9">

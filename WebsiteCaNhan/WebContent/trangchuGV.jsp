@@ -13,29 +13,10 @@
   <link rel="shortcut icon" href="img/icon.ico" />
   <!--  Responsive-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Dong Ho -->
-  <link href="css/datepicker.css" rel="stylesheet">
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/datepicker.js"></script>
-  <script src="js/trangchuGV.js"></script>
-  <!-- End DongHo -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
   <script src="jquery/jquery-3.1.0.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-
-      $(window).scroll(function() {
-        var topmenu = $(".header-topbar").height();
-        if ($(window).scrollTop() >= topmenu) {
-          $('.header-main.homepage-01').addClass('fixed-header');
-        } else {
-          $('.header-main.homepage-01').removeClass('fixed-header');
-        }
-      });
-
-    });
-  </script>
+  
 </head>
 
 <body>
@@ -192,8 +173,8 @@
     </div>
 
 
-      <div class="row">
-        <div class="col-md-7">
+    
+    
            <div class="panel panel-default">
             <div class="panel-heading" style="background-color: #fff0f5">
                 <div class="panel-title" style="color: red;font-weight: bold;font-size: 50">Danh sách các bài tập đã nộp</div>
@@ -274,43 +255,164 @@
                       </table>
                   </div>
               </div>
-        </div>
-        <div class="col-md-5">
+
+                 <!-- panel-default -->
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color: #e0ffff">
                     <div class="panel-title" style="color:blue; font-weight: bold;font-size: 50">Thảo luận</div>
                 </div>
+                <!-- panel-body -->
                 <div class="panel-body">
-                    <div class="input-group">
-                      <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Nội dung" />
-                      <span class="input-group-btn" onclick="addComment()">     
-                          <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Bình luận</a>
-                      </span>
-                    </div>
-                    <hr data-brackets-id="12673">
-                    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
-                    <strong class="pull-left primary-font">Thơm</strong>
-                    <small class="pull-right text-muted">
-                       <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
-                    </br>
-                    <li class="ui-state-default">Cho em hỏi để làm ra một trang Web em cần học những gì ạ? </li>
-                    </br>
-                     <strong class="pull-left primary-font">Thành</strong>
-                    <small class="pull-right text-muted">
-                       <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
-                    </br>
-                    <li class="ui-state-default">Chào Thầy! </li>
+                    <!--  -->
+               
+                      <ul class="nav nav-pills nav-stacked col-md-3">
+                      <li class="active"><a href="#tab_a" data-toggle="pill">Tuần 1</a></li>
+                      <li><a href="#tab_b" data-toggle="pill">Tuần 2</a></li>
+                      <li><a href="#tab_c" data-toggle="pill">Tuần 3</a></li>
+                      <li><a href="#tab_d" data-toggle="pill">Tuần 4</a></li>
+                    </ul>
+                
+                    <!--  -->
+                    <!--  -->
+                    <div class=" tab-content col-md-9">
+                    <!-- tab tuan 1 -->
+                     <div class="tab-pane active" id="tab_a">
+                          
+                         
+                          <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+                          <div class="panel panel-info">
+                              <div class="panel-heading">
+                                <div class="panel-title">Chủ đề 1 - Thiết kế Website</div>
+                              </div>
+                              <div class="panel-body">
+                                <strong class="pull-left primary-font">Thơm</strong>
+                                <small class="pull-right text-muted">
+                                   <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+                                </br>
+                                <li class="ui-state-default">Cho em hỏi để làm ra một trang Web em cần học những gì ạ? </li><br>
+                          
+                                 <strong class="pull-left primary-font">Thành</strong>
+                                <small class="pull-right text-muted">
+                                   <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                <br>
+                                <li class="ui-state-default">Chào Thầy! </li><br>
+                                <div class="input-group">
+                                  <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Nội dung" />
+                                  <span class="input-group-btn" onclick="addComment()">     
+                                      <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Bình luận</a>
+                                  </span>
+                                </div>
+                              </div>
+                          </div>
+                         
+                        </ul>
 
-                    <hr>
-                    <p><a href="">Danh sách thảo luận tuần 1 - chủ đề thiết kế web</a></p>
-                    <p><a href="">Danh sách thảo luận tuần 2- chủ đề JSP Servlet</a></p>
-                    
-                  </ul>
+                          <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+                          <div class="panel panel-info"><!--panel-info-->
+                              <div class="panel-heading">
+                                <div class="panel-title">Chủ đề 2 - Học photoshop</div>
+                              </div>
+                              <div class="panel-body"><!--panel-body-->
+                                <strong class="pull-left primary-font">Thơm</strong>
+                                <small class="pull-right text-muted">
+                                   <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+                                </br>
+                                <li class="ui-state-default">Chào thầy! Cho em hỏi cách chọn mày photoshop ạ </li><br>
+                          
+                                 <strong class="pull-left primary-font">Thành</strong>
+                                <small class="pull-right text-muted">
+                                   <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                <br>
+                                <li class="ui-state-default">Chọn màu photoshop chúng ta thực hiện như sau:...</li><br>
+                                <div class="input-group">
+                                  <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Nội dung" />
+                                  <span class="input-group-btn" onclick="addComment()">     
+                                      <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Bình luận</a>
+                                  </span>
+                                </div>
+                              </div><!--panel-body-->
+                          </div><!--panel-info-->
+
+                         
+                        </ul>
+                  </div><!--tab tuan 1-->
+
+                   <!-- tab tuan 2 -->
+                     <div class="tab-pane" id="tab_b">
+                          
+                         
+                          <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+                          <div class="panel panel-info"><!--panel-info-->
+                              <div class="panel-heading">
+                                <div class="panel-title">Chủ đề 1 - Lập trình Web</div>
+                              </div>
+                              <div class="panel-body"><!--panel-body-->
+                                <strong class="pull-left primary-font">Thơm</strong>
+                                <small class="pull-right text-muted">
+                                   <span class="glyphicon glyphicon-time"></span>7 mins ago</small>
+                                </br>
+                                <li class="ui-state-default">Chào thầy! Cho em hỏi các kỹ thuật của Boostrap ạ? </li><br>
+                          
+                                 <strong class="pull-left primary-font">Thành</strong>
+                                <small class="pull-right text-muted">
+                                   <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                <br>
+                                <li class="ui-state-default">Boostrap có 12 kỹ thuật cần có :....</li><br>
+                                <div class="input-group">
+                                  <input type="text" id="userComment" class="form-control input-sm chat-input" placeholder="Nội dung" />
+                                  <span class="input-group-btn" onclick="addComment()">     
+                                      <a href="#" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-comment"></span> Bình luận</a>
+                                  </span>
+                                </div>
+                              </div><!--panel-body-->
+                          </div><!--panel-info-->
+
+                         
+                        </ul>
+                  </div><!--tab tuan 2-->
+
+                </div>
+                  <!--  -->
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ThemCHude">Thêm chủ đề</button>
+                </div>
+                <!-- end panel-body -->
+              </div>
+              <!-- end panel-default -->
+          
+
+  
+        <!-- Modal -->
+              <div class="modal fade" id="ThemCHude" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Thêm chủ đề thảo luận</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                          <label for="usr">Tuần:</label>
+                          <input type="text" class="form-control input-sm" id="usr"  placeholder="Nhập tuần">
+                        </div>
+                         <div class="form-group">
+                          <label for="usr">Tên chủ đề:</label>
+                          <input type="text" class="form-control input-sm" id="usr"  placeholder="Nhập tên chủ đề">
+                        </div>
+                      
+
+                    </div>
+                    <div class="modal-footer">
+                     <button type="button" class="btn btn-danger" data-dismiss="modal">Save</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button><br>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            </div>
-
-        </div>
+            
+              <!--  -->
         <div class="panel panel-default">
           <div class="panel with-nav-tabs panel-warning">
                 <div class="panel-heading">

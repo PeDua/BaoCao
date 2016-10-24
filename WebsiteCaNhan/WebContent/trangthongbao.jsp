@@ -183,14 +183,24 @@
 			   			<div class="panel-title" style="color: #0000cd">Tạo thông báo mới</div>
 			   		</div>
 			   		<div class="panel-body" style="background-color: #fafad2">
-				   		<div class="form-group">
-					      <label for="usr">Tên thông báo:</label>
-					      <input type="text" class="form-control" id="usr">
-					    </div>
-			   			<div class="form-group">
-					      <label for="comment">Nội dung:</label>
-					      <textarea class="form-control" rows="5" id="comment"></textarea>
-					    </div>
+                <form class="form-horizontal" role="form">
+    				   		<div class="form-group">
+    					      <label for="usr" class="col-sm-2 control-label">Tên thông báo:</label>
+                    <div class="col-sm-10">
+    					         <input type="text" class="form-control" id="usr">
+                    </div>
+    					    </div>
+    			   			<div class="form-group">
+    					      <label for="comment" class="col-sm-2 control-label">Nội dung:</label>
+                    <div class="col-sm-10">
+    					      <textarea class="form-control" rows="5" id="comment"></textarea>
+                    </div>
+    					    </div>
+                </form>
+                <div class="col-sm-offset-2 col-sm-10">
+                 <button type="button" class="btn btn-success">Lưu</button>
+                 <a href="" class="primary">Hủy</a>
+                 </div>
 			   		</div>
 			   </div>
 			  </div>
