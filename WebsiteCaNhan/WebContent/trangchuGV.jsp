@@ -20,6 +20,18 @@
 </head>
 
 <body>
+	<%
+	    if ((session.getAttribute("tendangnhap") == null) || (session.getAttribute("tendangnhap") == "")) {
+	%>
+		response.sendRedirect("trangchu.jsp");
+	<%} else {
+	%>
+	Welcome <%=session.getAttribute("tendangnhap")%>
+	<a href='logout.jsp'>Log out</a>
+	<%
+	    }
+	%>
+
   <div class="container">
    <!-- Header -->
      <header>
@@ -86,7 +98,7 @@
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
-                    class="glyphicon glyphicon-user" style = "color:#4169e1"></span>Giảng viên<b class="caret"></b></a>
+                    class="glyphicon glyphicon-user" style = "color:#4169e1"></span><%=session.getAttribute("tendangnhap")%><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span>Cá nhân</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Cài đặt</a></li>

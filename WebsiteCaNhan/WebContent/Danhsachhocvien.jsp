@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +23,16 @@
 </head>
 
 <body>
-<div class="container">
+
+	<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://localhost/taikhoan?useSSL=false"
+     user="root"  password="1234"/>
+ 
+	<sql:query dataSource="${snapshot}" var="result">
+	SELECT * FROM db_taikhoan;
+	</sql:query>
+	
+	<div class="container">
     <header>
     <div class="header-topbar" style="background-color: #195690;">
         <div class="container">
@@ -48,7 +61,7 @@
 
     <div class="navbar-header">
       <div class="logo pull-left">
-                <a href="trangchu.html" class="header-logo"><img src="img/logo.png" style = "width: 160px" alt="" /></a>
+                <a href="trangchu.jsp" class="header-logo"><img src="img/logo.png" style = "width: 160px" alt="" /></a>
               </div>
     </div>
 
@@ -98,22 +111,16 @@
   </div><!-- /container -->
 
 </header>  
-!-- Main -->
+<!-- Main -->
 <div class="container">
 
 <div class="row">
     <div class="col-md-3">
      <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>Home</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-list-alt fa-fw"></i>Widgets</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-table fa-fw"></i>Table</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-calendar fa-fw"></i>Calender</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-book fa-fw"></i>Library</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-pencil fa-fw"></i>Applications</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
+                <li><a href="#"><i class="fa fa-list-alt fa-fw"></i>Widgets</a></li>
+                <li><a href="#"><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
+               
             </ul>
    
     </div><!-- /col-3 -->
@@ -131,72 +138,31 @@
                 <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
               </form>    
             <table id="mytable" class="table table-bordred table-striped">
-                <thead>
+            
+			<thead>
                     <th>Họ và tên</th>
-                    <th>Email </th>
-                    <th>Số điện thoại</th>
-                    <th>Mail</th>
-                    <th>Xem</th>
-                    <th>Xóa</th>
+                    <th>Số điện thoại </th>
+                    <th>Email</th>
+                    
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Huỳnh Nhật Thành</td>
-                        <td>abc@gmail.com</td>
-                        <td>+923335586757</td>
-                       <td>
+                <c:forEach var="row" items="${result.rows}">
+				<tr>
+				   <td><c:out value="${row.hovaten}"/></td>
+				   <td><c:out value="${row.sdt}"/></td>
+				   <td><c:out value="${row.email}"/></td>
+				    <td>
                             <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-envelope"></span></button></p>
                         </td>
                         <td>
-                            <button class="btn btn-warning btn-xs"><a href="trangthongtincanhan.html"><span class="glyphicon glyphicon-pencil"></span></a></button>
+                            <button class="btn btn-warning btn-xs"><a href="trangchinhsuathongtincanhan.jsp"><span class="glyphicon glyphicon-pencil"></span></a></button>
                         </td>
                         <td>
                             <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Huỳnh Nhật Thành</td>
-                        <td>abc@gmail.com</td>
-                        <td>+923335586757</td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-envelope"></span></button></p>
-                        </td>
-                        <td>
-                            <button class="btn btn-warning btn-xs"><a href="trangthongtincanhan.html"><span class="glyphicon glyphicon-pencil"></span></a></button>
-                        </td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Huỳnh Nhật Thành</td>
-                        <td>abc@gmail.com</td>
-                        <td>+923335586757</td>
-                       <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-envelope"></span></button></p>
-                        </td>
-                        <td>
-                            <button class="btn btn-warning btn-xs"><a href="trangthongtincanhan.html"><span class="glyphicon glyphicon-pencil"></span></a></button>
-                        </td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Huỳnh Nhật Thành</td>
-                        <td>abc@gmail.com</td>
-                        <td>+923335586757</td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-envelope"></span></button></p>
-                        </td>
-                        <td>
-                            <button class="btn btn-warning btn-xs"><a href="trangthongtincanhan.html"><span class="glyphicon glyphicon-pencil"></span></a></button>
-                        </td>
-                        <td>
-                            <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span></button></p>
-                        </td>
-                         
-                    </tr>
+				</tr>
+				</c:forEach>
+                    
                 </tbody>
             </table>
             <p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-success btn-lg" data-title="AddUser" data-toggle="modal" data-target="#add-user"><span class="glyphicon glyphicon-user"></span> Thêm học viên</button></p>

@@ -52,7 +52,7 @@
                     <div class="header-main-wrapper">
                         <div class="navbar-header">
                             <div class="logo pull-left">
-                                <a href="trangchu.html" class="header-logo"><img src="img/logo.png" alt="" /></a>
+                                <a href="trangchu.jsp" class="header-logo"><img src="img/logo.png" alt="" /></a>
                             </div>
                             <button type="button" data-toggle="collapse" data-target=".navigation" class="navbar-toggle edugate-navbar">
                                 <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -71,12 +71,12 @@
                             <div class="navbar-header">
                                 <ul class="nav-links nav navbar-nav">
 
-                                    <li class="active"><a href="trangchu.html" class="main-menu">Trang chủ </a> </li>
+                                    <li class="active"><a href="trangchu.jsp" class="main-menu">Trang chủ </a> </li>
                                     <li class="dropdown">
                                         <a href="#" class="main-menu data-toggle">Các khóa học <span class="fa fa-angle-down icons-dropdown"></span></a>
                                         <ul class="dropdown-menu edugate-dropdown-menu-1">
                                             <li>
-                                                <a href="trangdangkykhoahoc.html" class="link-page">Lập trình web</a>
+                                                <a href="trangdangkykhoahoc.jsp" class="link-page">Lập trình web</a>
                                             </li>
                                             <li>
                                                 <a href=="#" class="link-page">Java</a>
@@ -89,9 +89,9 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class=""><a href="tranglienhe.html" class="main-menu">Liên hệ </a></li>
+                                    <li class=""><a href="tranglienhe.jsp" class="main-menu">Liên hệ </a></li>
                                     <li class=""><a href="" class="main-menu" data-toggle="modal" data-target=".loginModal"> Đăng nhập</a></li>
-                                    <li class=""><a href="trangdangky.html" class="main-menu"> Đăng ký</a></li>
+                                    <li class=""><a href="trangdangky.jsp" class="main-menu"> Đăng ký</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -152,13 +152,13 @@
                     <div class="modal fade loginModal  " tabindex="-1" role="dialog" aria-labelledby="loginModal">
                         <div class="modal-dialog modal-sm" role="document" ng-app="demoApp" ng-controller="RegisterCtrl">
 
-                            <form role="form" class="form-horizontal login" name="form" novalidate>
+                            <form method="post" action="login.jsp" role="form" class="form-horizontal login" name="form" novalidate>
                                 <h2 style="color: blue; font-weight: bold;">Đăng nhập</h2>
                                 <hr class="colorgraph">
 
 
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" class="form-control input-lg" placeholder="Tên đăng nhập" tabindex="1" ng-model="username" ng-minlength="6" ng-maxlength="50" ng-pattern="/^[a-zA-Z, ]+$/" required>
+                                    <input type="text" name="username" id="username" class="form-control input-lg" placeholder="Tên đăng nhập" tabindex="1" ng-model="username" ng-minlength="6" ng-maxlength="50" ng-pattern="/^[a-zA-Z1-9, ]+$/" required>
                                     <i class="fa fa-check text-success" ng-show="form.username.$dirty && form.username.$valid"></i>
                                     <div ng-show="form.username.$dirty && form.username.$invalid" class="text-danger"><i class="fa fa-times text-danger"></i>
                                         <span ng-show="form.username.$error.required">Họ tên không được bỏ trống</span>
@@ -171,17 +171,15 @@
 
 
                                 <div class="form-group">
-                                    <input tabindex="4" name="password" ng-model="password" type="password" value="" class="form-control input-lg" placeholder="Mật khẩu" ng-minlength="6" ng-maxlength="30" required> </div>
+                                    <input  tabindex="1" password" ng-model="password" type="password" value="" class="form-control input-lg" placeholder="Mật khẩu" ng-minlength="6" ng-maxlength="30" required> </div>
                                 <i class="fa fa-check text-success" ng-show="form.password.$dirty && form.password.$valid"></i>
                                 <div ng-show="form.password.$dirty && form.password.$invalid" class="text-danger"><i class="fa fa-times text-danger"></i>
                                     <span ng-show="form.password.$error.required">Mật khẩu không được bỏ trống</span>
                                     <span ng-show="form.password.$error.minlength">Mật khẩu phải dài hơn 6 kí tự</span>
                                     <span ng-show="form.password.$error.maxlength">Mật khẩu phải ngắn hơn 30 kí tự</span>
                                 </div>
+								<div class="col-xs-12 col-md-6"><input type="submit" value="Đăng nhập" class="btn btn-primary btn-block btn-lg"></div>
 
-                                <div class="text-center">
-                                    <a href="trangdanhsachkhoahoccuatui.html" type="submit" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Đăng nhập</a>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -196,17 +194,17 @@
                             <li class="col-md-3 clear4">
                                 <div class="block courseitem">
                                     <div class="block_media">
-                                        <a href="trangdangkykhoahoc.html"><img src="img/jsp-servlet.jpg" height="150" width="300"></a>
+                                        <a href="trangdangkykhoahoc.jsp"><img src="img/jsp-servlet.jpg" height="150" width="300"></a>
                                         <div class="avatar-list">
                                             <div class="hinhgiangvien"><img src="img/jsp-servlet.jpg" class="avatar-course" alt="Profile Photo" width="32" height="32"></div>
                                             <div class="tongbaihoc">71 bài học</div>
                                             <div class="thoiluongvideo">Video 16 giờ 10 phút</div>
-                                            <a href="trangdangkykhoahoc.html" class="btn-info xemngaykhoahoc showbuttontrangchu">Xem ngay</a>
+                                            <a href="trangdangkykhoahoc.jsp" class="btn-info xemngaykhoahoc showbuttontrangchu">Xem ngay</a>
                                         </div>
                                     </div>
 
                                     <div class="block_content">
-                                        <h4 class="block_title"><a href="trangdangkykhoahoc.html" title="Java Web JSP-SERVLET">Java Web JSP-SERVLET</a></h4>
+                                        <h4 class="block_title"><a href="trangdangkykhoahoc.jsp" title="Java Web JSP-SERVLET">Java Web JSP-SERVLET</a></h4>
 
                                         <div class="item-instructor">
                                             <img src="img/logo.jpg" class="avatar-course " alt="Profile Photo" height="32" width="32">
